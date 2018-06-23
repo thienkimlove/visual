@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90CFD19A-BC93-4D0C-802A-2AD76D565DA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoLead</RootNamespace>
+    <AssemblyName>AutoLead</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>AutoLead.ico</ApplicationIcon>
+    <StartupObject>AutoLead.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="IPAddressControlLib">
+      <HintPath>..\..\Autolead ios6772\IPAddressControlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Routrek.Granados">
+      <HintPath>..\..\Autolead ios6772\Routrek.Granados.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\Autolead ios6772\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="appDetail.cs" />
+    <Compile Include="backup.cs" />
+    <Compile Include="Carrier.cs" />
+    <Compile Include="command.cs" />
+    <Compile Include="commandResult.cs" />
+    <Compile Include="countrycode.cs" />
+    <Compile Include="countrycodeiOS.cs" />
+    <Compile Include="deviceInfo.cs" />
+    <Compile Include="DownloadProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadProgress.Designer.cs">
+      <DependentUpon>DownloadProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptedString.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="geo.cs" />
+    <Compile Include="ipData.cs" />
+    <Compile Include="languagecode.cs" />
+    <Compile Include="ListViewColumnSorter.cs" />
+    <Compile Include="ListViewItem1.cs" />
+    <Compile Include="LV_ITEM.cs" />
+    <Compile Include="NMHDR.cs" />
+    <Compile Include="NMITEMACTIVATE.cs" />
+    <Compile Include="offerItem.cs" />
+    <Compile Include="OfferOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferOption.Designer.cs">
+      <DependentUpon>OfferOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POINT.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reader.cs" />
+    <Compile Include="RNCryptor\AesMode.cs" />
+    <Compile Include="RNCryptor\Algorithm.cs" />
+    <Compile Include="RNCryptor\Cryptor.cs" />
+    <Compile Include="RNCryptor\Decryptor.cs" />
+    <Compile Include="RNCryptor\Encryptor.cs" />
+    <Compile Include="RNCryptor\HmacAlgorithm.cs" />
+    <Compile Include="RNCryptor\Options.cs" />
+    <Compile Include="RNCryptor\PayloadComponents.cs" />
+    <Compile Include="RNCryptor\Pbkdf2Prf.cs" />
+    <Compile Include="RNCryptor\Schema.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="ssh.cs" />
+    <Compile Include="SshChecker.cs" />
+    <Compile Include="sshcommand.cs" />
+    <Compile Include="textvar.cs" />
+    <Compile Include="Vip72.cs" />
+    <Compile Include="Vip72Chung.cs" />
+    <Compile Include="vipaccount.cs" />
+    <Compile Include="Win32AllocationTypes.cs" />
+    <Compile Include="Win32MemoryProtection.cs" />
+    <Compile Include="Win32ProcessAccessType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DownloadProgress.resx">
+      <DependentUpon>DownloadProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferOption.resx">
+      <DependentUpon>OfferOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
